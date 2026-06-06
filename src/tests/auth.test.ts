@@ -26,7 +26,7 @@ describe("getAPIKey", () => {
   test("returns the key when header is valid", () => {
     const secretKey = randomUUID();
     expect(getAPIKey({ authorization: getValidApiKeyAuth(secretKey) })).toBe(
-      "secretKey",
+      secretKey,
     );
   });
 });
